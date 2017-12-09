@@ -362,25 +362,7 @@ public abstract class WallpaperBoardActivity extends AppCompatActivity implement
             if (id == R.id.navigation_view_wallpapers) mPosition = 0;
             else if (id == R.id.navigation_view_favorites) mPosition = 1;
             else if (id == R.id.navigation_view_settings) mPosition = 2;
-            else if (id == R.id.navigation_view_about) mPosition = 3; {
-                Intent intent = new Intent(Intent.ACTION_SEND);
-                intent.setType("text/plain");
-                intent.putExtra(Intent.EXTRA_SUBJECT, getResources().getString(R.string.share_app_subject,
-                        getResources().getString(R.string.app_name)));
-                intent.putExtra(Intent.EXTRA_TEXT, getResources().getString(R.string.share_app_body,
-                        getResources().getString(R.string.app_name),
-                        "https://play.google.com/store/apps/details?id=" +getPackageName()));
-                startActivity(Intent.createChooser(intent, getResources().getString(R.string.email_client)));
-                return false;
-
-            } else if (id == R.id.navigation_view_rate) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(
-                        "https://play.google.com/store/apps/details?id=" +getPackageName()));
-                intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
-                startActivity(intent);
-                return false;
-            }
-
+            else if (id == R.id.navigation_view_about) mPosition = 3; 
             item.setChecked(true);
             mDrawerLayout.closeDrawers();
             return true;
