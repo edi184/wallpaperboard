@@ -26,10 +26,13 @@
 
     </group>
     
-    <group>
-        <item		
-          android:id="@+id/navigation_view_about"			
-          android:title="PornAOSP Team"/>
+    <group android:id="@+id/optional"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/navigation_view_nothing"
+            android:title="PornAOSP Team"/>
+
     </group>
     
 </menu>
