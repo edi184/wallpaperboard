@@ -358,6 +358,8 @@ public abstract class WallpaperBoardActivity extends AppCompatActivity implement
             if (id == R.id.navigation_view_wallpapers) mPosition = 0;
             else if (id == R.id.navigation_view_favorites) mPosition = 1;
             else if (id == R.id.navigation_view_settings) mPosition = 2;
+            else if (id == R.id.navigation_view_about) mPosition = 3;
+            else if (id == R.id.navigation_view_nothing) mPosition = 4;
             item.setChecked(true);
             mDrawerLayout.closeDrawers();
             return true;
