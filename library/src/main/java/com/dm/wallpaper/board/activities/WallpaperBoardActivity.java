@@ -345,10 +345,6 @@ public abstract class WallpaperBoardActivity extends AppCompatActivity implement
                         R.color.navigation_view_item_highlight_dark :
                         R.color.navigation_view_item_highlight);
 
-        MenuItem menuItem = mNavigationView.getMenu().findItem(R.id.navigation_view_donate);
-        if (menuItem != null) {
-            menuItem.setVisible(getResources().getBoolean(R.bool.enable_donation));
-        }
 
         mNavigationView.setItemTextColor(colorStateList);
         mNavigationView.setItemIconTintList(colorStateList);
